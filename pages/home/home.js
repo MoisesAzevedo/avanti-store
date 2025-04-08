@@ -1,12 +1,14 @@
 import "../../components/header/Header.js";
+import "../../components/promotion/Promotion.js";
 
 class Home extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-   <header-app></header-app>
+    <promotion-app></promotion-app>
+    <header-app></header-app>
     `;
   }
 }
 
-//registra a tag personalizada
+//registered a personalized tag
 customElements.define("home-app", Home);

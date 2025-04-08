@@ -1,6 +1,5 @@
 .header-container {
-  background-color: #f0f0f0;
-  padding: 20px;
-  font-size: 1.5rem;
-  color: #333;
+  width: 1920;
+  height: 118;
+  top: 30px;
 }
