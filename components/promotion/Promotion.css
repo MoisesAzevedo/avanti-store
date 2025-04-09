@@ -42,9 +42,7 @@ p {
 
 .light-text {
   font-weight: 10;
-  font-style: oblique 13deg; /* ou 5deg pra inclinar menos ainda */
 
-  transform: skewX(-10deg);
-  display: inline-block; /* necessário pra aplicar transform */
+  transform: skewX(-5deg);
 }
 /* ---------- */

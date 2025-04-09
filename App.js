@@ -8,5 +8,5 @@ class App extends HTMLElement {
   }
 }
 
-//registra a tag personalizada
+//registered a personalized tag
 customElements.define("root-app", App);

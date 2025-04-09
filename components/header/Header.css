@@ -1,5 +1,145 @@
 .header-container {
-  width: 1920;
-  height: 118;
-  top: 30px;
+  width: 100%;
+
+  /*tirei o margin top, pois o aviso de promoção é um elemento que pode ser removido 
+  futuramente, então o header precisa voltar pra posição no topo da tela */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 17px;
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  width: 65%;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+.header-logo {
+  width: 152px;
+  height: 27px;
+
+  color: black;
+}
+
+/* ------  Search bar --------- */
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  margin-left: 65px;
+}
+.search-input {
+  width: 594px;
+  height: 40px;
+
+  top: 46px;
+  left: 548px;
+
+  border-radius: 10px;
+  border: solid 1px;
+  border-color: rgba(221, 221, 221, 1);
+
+  padding-left: 24px;
+}
+
+.search-input:focus {
+  outline: none;
+  transition: 200ms;
+  box-shadow: 0px 0px 8px -4px var(--global-blue);
+}
+
+.search-input::placeholder {
+  color: black;
+}
+
+.search-img {
+  width: 50px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0px;
+
+  color: black;
+}
+
+.search-img:hover {
+  cursor: pointer;
+  color: var(--global-blue);
+}
+/* ------  cart and user --------- */
+
+.cart-and-user {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+}
+
+.person-svg {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  color: var(--global-blue);
+}
+.person-svg svg {
+  width: 20px;
+  height: 24px;
+}
+
+.hello-user p {
+  height: 13px;
+
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+
+  color: black;
+  font-weight: 600;
+}
+
+/* button */
+.button-and-lenght {
+  display: flex;
+  position: relative;
+}
+
+.cart-button {
+  display: flex;
+  color: black;
+}
+
+.cart-length {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--global-blue);
+
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+
+  position: absolute;
+  bottom: 12px;
+  left: 17px;
+
+  font-size: 12px;
+  color: white;
+}
+/* ------ */
+
+/* ----------------- */
