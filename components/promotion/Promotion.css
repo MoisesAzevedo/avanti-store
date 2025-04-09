@@ -1,5 +1,5 @@
 .promotion-container {
-  background-color: var(--global-blue);
+  background-color: var(--primary);
   color: rgba(255, 255, 255, 1);
 
   font-weight: 700;
@@ -13,10 +13,7 @@
   height: 30px;
 }
 
-/* ### Text */
-p {
-  margin-left: 0.3rem; /* ou o valor que quiser */
-}
+/* ---------- Text ---------- */
 
 .text {
   display: flex;

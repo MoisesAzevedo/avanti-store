@@ -1,0 +1,33 @@
+@media (max-width: 767px) {
+  /* Aqui você escreve o layout mobile — pode ser diferente ou simplificado */
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 16px;
+  }
+
+  .categories {
+    flex-direction: column;
+  }
+
+  .burg-menu {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .home-menu {
+    position: static;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .home-menu-container {
+    margin-top: 8px;
+    padding: 8px;
+  }
+
+  /* Outros ajustes específicos para o mobile... */
+}

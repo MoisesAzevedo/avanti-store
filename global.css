@@ -7,7 +7,7 @@ body {
   font-family: "Nunito Sans", sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  background: var(--body-color);
   color: #333;
   display: flex;
   flex-direction: column;
@@ -15,11 +15,15 @@ body {
 
 :root {
   /* colors */
-  --global-blue: rgba(0, 92, 255, 1);
-  --global-dark-gray: rgba(194, 194, 194, 1);
-  --global-light-gray: rgba(222, 222, 222, 1);
+  --body-color: rgba(255, 255, 255, 1);
+  --primary: rgba(0, 92, 255, 1);
+  --dark-gray: rgba(194, 194, 194, 1);
+  --light-gray: rgba(222, 222, 222, 1);
 
   /* fonts */
-  --global-font: "Nunito Sans", sans-serif;
-  --global-font-size: 14px;
+  --default-font: "Nunito Sans", sans-serif;
+  --default-font-size: 14px;
+
+  /* animations */
+  --hover-transition: 200ms;
 }
