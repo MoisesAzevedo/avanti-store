@@ -47,7 +47,7 @@ class Header extends HTMLElement {
               </div>
             </div>
           </div>  
-          <div class="menu"></div>  
+          <div class="nav"></div>  
         </div>
       </section>
     `;
