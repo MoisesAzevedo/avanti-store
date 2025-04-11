@@ -5,22 +5,31 @@
     align-items: center;
     margin-top: 23px;
     position: relative;
-  }
-
-  .nav p {
-    margin-left: 45px;
+    height: 22px;
   }
 
   .categories {
     display: flex;
     align-items: center;
     color: black;
+    margin-left: 45px;
+
+    height: 22px;
   }
 
   .category-label {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    position: relative;
+
+    width: 91px;
+    height: 100%;
+  }
+
+  .category-label p {
+    position: absolute;
   }
 
   /* -------- burg menu -------- */
@@ -31,9 +40,17 @@
     stroke: black;
     cursor: pointer;
     transition: var(--hover-transition);
+
+    height: 100%;
   }
 
-  .burg-menu p {
+  .all-categories {
+    height: 100%;
+    margin: 0;
+  }
+
+  .all-categories p {
+    margin: 0;
     margin-left: 8px;
   }
 
@@ -41,10 +58,14 @@
   .menu-wrapper {
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
-  .menu-wrapper:hover .home-menu {
+  .menu-wrapper:hover .home-menu-container {
     transition: var(--hover-transition);
+
+    display: flex;
+    flex-direction: column;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -59,25 +80,29 @@
   }
 
   /* -------- home menu -------- */
-  .home-menu {
+  .home-menu-container {
     width: 1261px;
     height: max-content;
+
     position: absolute;
     left: 0;
     top: 100%;
     margin-top: 0;
     z-index: 10;
+
     display: flex;
     flex-direction: column;
+
+    display: none;
     opacity: 0;
     visibility: hidden;
     transition: var(--hover-transition);
     pointer-events: none;
   }
 
-  .home-menu-container {
+  .home-menu {
     margin-top: 16px;
-    background-color: rgba(245, 245, 245, 1);
     box-shadow: 0px 4px 8px -1px rgba(0, 0, 0, 0.1);
+    height: 329px;
   }
 }

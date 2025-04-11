@@ -1,0 +1,101 @@
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    position: relative;
+  }
+
+  .wrapper {
+    display: flex;
+  }
+
+  .list-container {
+    width: 234px;
+    height: 329px;
+    background-color: rgba(245, 245, 245, 1);
+  }
+
+  /* ------------ scrlool bar-------------- */
+  .list-overflow {
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 220px;
+
+    margin-top: 10px;
+  }
+
+  .list-overflow::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .list-overflow::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+  }
+
+  .list-overflow::-webkit-scrollbar-thumb {
+    background: rgba(206, 206, 206, 1);
+    border-radius: 8px;
+  }
+
+  .list-overflow::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  /* ----------------- */
+  .list {
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+
+    width: 201px;
+    height: 310px;
+
+    margin-left: 15px;
+  }
+
+  .list-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+
+    cursor: pointer;
+  }
+
+  /*   .list-item:hover {
+    color: var(--primary);
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--hover-transition);
+  } */
+
+  .arrow {
+    position: absolute;
+    right: 15px;
+  }
+}
+.categories-items-container {
+  width: calc(100% - 234px);
+  height: 100%;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  position: absolute;
+  top: 0;
+  left: 234px;
+}
+
+.categories-items {
+  height: 100%;
+  width: 100%;
+}
+
+/* -------- banner -------- */
+.banner {
+  position: absolute;
+  right: 0;
+  background-color: black;
+}
+/* ---------------- */

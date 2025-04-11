@@ -1,8 +1,9 @@
-import { logo_svg } from "../../img/logo.js";
-import { search_svg } from "../../img/icons/search.js";
-import { person_svg } from "../../img/icons/person.js";
-import { cart_button_svg } from "../../img/icons/cart.js";
-import { generateNav } from "./components/HeaderNav.js";
+import { logo_svg } from "@img/logo.js";
+import { search_svg } from "@img/icons/search.js";
+import { person_svg } from "@img/icons/person.js";
+import { cart_button_svg } from "@img/icons/cart.js";
+/* import { generateNav } from "./components/HeaderNav.js"; */
+import "./components/HeaderNav.js";
 
 class Header extends HTMLElement {
   constructor() {
@@ -11,18 +12,19 @@ class Header extends HTMLElement {
   }
 
   async connectedCallback() {
-    const [globalStyles, desktopStyles, mobileStyles, nav] = await Promise.all([
-      fetch(new URL("../../shadow-base.css", import.meta.url)).then((res) =>
-        res.text()
-      ),
-      fetch(new URL("./Header.desktop.css", import.meta.url)).then((res) =>
-        res.text()
-      ),
-      fetch(new URL("./Header.mobile.css", import.meta.url)).then((res) =>
-        res.text()
-      ),
-      generateNav()
-    ]);
+    const [globalStyles, desktopStyles, mobileStyles /* nav */] =
+      await Promise.all([
+        fetch(new URL("../../shadow-base.css", import.meta.url)).then((res) =>
+          res.text()
+        ),
+        fetch(new URL("./Header.desktop.css", import.meta.url)).then((res) =>
+          res.text()
+        ),
+        fetch(new URL("./Header.mobile.css", import.meta.url)).then((res) =>
+          res.text()
+        )
+        /*       generateNav() */
+      ]);
 
     const user_name = "";
     const input_default_value = "Digite aqui o que você procura";
@@ -33,9 +35,9 @@ class Header extends HTMLElement {
         ${globalStyles}
         ${desktopStyles}
         ${mobileStyles}
-        ${nav.styles}
+      
       </style>
-      <section class="header-container">
+      <header class="header-container">
         <div class="content"> 
           <div class="actions">
             <div class="header-logo">${logo_svg}</div>
@@ -58,10 +60,20 @@ class Header extends HTMLElement {
             </div>
           </div>  
 
-          ${nav.html}
+           
+          <nav-menu></nav-menu>
         </div>
-      </section>
+      </header>
     `;
+
+    const logo = this.shadowRoot.querySelector(".header-logo");
+
+    if (logo) {
+      logo.addEventListener("click", () => {
+        console.log("Logo clicado!");
+        // Ou redirecionar: window.location.href = "/";
+      });
+    }
   }
 }
 

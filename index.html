@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <base href="/avanti-store/" />
+    <!-- <base href="/avanti-store/" /> -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./img/logo-ico.png" type="image/png" />
@@ -12,6 +12,16 @@
   <body>
     <!-- tag onde roda o app -->
     <root-app></root-app>
+
+    <!-- para imports mais semânticos -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@img/": "./img/",
+          "@components/": "./components/"
+        }
+      }
+    </script>
 
     <!-- Importa o App principal -->
     <script type="module" src="./App.js"></script>
