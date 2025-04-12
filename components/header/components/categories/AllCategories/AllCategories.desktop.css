@@ -62,18 +62,13 @@
     cursor: pointer;
   }
 
-  /*   .list-item:hover {
-    color: var(--primary);
-    font-weight: 700;
-    cursor: pointer;
-    transition: var(--hover-transition);
-  } */
-
   .arrow {
     position: absolute;
     right: 15px;
   }
 }
+
+/* ---------- container  ------------- */
 .categories-items-container {
   width: calc(100% - 234px);
   height: 100%;
@@ -92,10 +87,7 @@
   width: 100%;
 }
 
-/* -------- banner -------- */
-.banner {
-  position: absolute;
-  right: 0;
-  background-color: black;
+.categories-items h1 {
+  color: yellow;
 }
-/* ---------------- */
+/* ----------------------- */

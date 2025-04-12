@@ -1,5 +1,5 @@
 import { right_arrow_svg } from "@img/icons/right-arrow.js";
-import { categories } from "./categories.js";
+import { categories } from "../categories.js";
 
 class allCategoriesPlus extends HTMLElement {
   constructor() {
@@ -9,13 +9,13 @@ class allCategoriesPlus extends HTMLElement {
 
   async connectedCallback() {
     const [desktopStyles, defaultStyles, globalStyles] = await Promise.all([
-      fetch(new URL("./all-categories.desktop.css", import.meta.url)).then(
+      fetch(new URL("./AllCategories.desktop.css", import.meta.url)).then(
         (res) => res.text()
       ),
-      fetch(new URL("./default.css", import.meta.url)).then((res) =>
+      fetch(new URL("../default.css", import.meta.url)).then((res) =>
         res.text()
       ),
-      fetch(new URL("../../../../shadow-base.css", import.meta.url)).then(
+      fetch(new URL("../../../../../shadow-base.css", import.meta.url)).then(
         (res) => res.text()
       )
     ]);
@@ -41,11 +41,9 @@ class allCategoriesPlus extends HTMLElement {
                      </div>
                      <section class="categories-items-container">
                         <div class="categories-items">
-                           ${submenuData.item}
-                           <section class="banner">banner</section>                       
+                           ${submenuData.item}                     
                         </div>
                      </section>
-                  
                   </div>
                 `
               )

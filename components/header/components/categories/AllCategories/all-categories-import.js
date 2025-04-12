@@ -1,4 +1,5 @@
-import "./all-categories.js";
+//to resolve circular imports
+import "./AllCategories.js";
 
 export const all_categories = {
   all_categories: {

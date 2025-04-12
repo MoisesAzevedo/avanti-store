@@ -1,4 +1,5 @@
-import { newArrives } from "./new-arrives.js";
+import { categoryNames } from "./names.js";
+import "./NewArrives/NewArrives.js";
 /* import { clothes } from "./clothes.js";
 import { shoes } from "./shoes.js";
 import { accessories } from "./accessories.js";
@@ -33,21 +34,31 @@ import { promotions } from "./promotions.js"; */
  
 }; */
 
+// categories.js
+
 export const categories = {
-  new_arrives: { name: "Novidades", item: newArrives },
-  Teste: { name: "Teste", item: "<p>TESTANDO 2</p>" },
-  clothes: { name: "Roupas", item: "<p>TESTANDO 3</p>" },
-  shoes: { name: "Calçados", item: "<p>TESTANDO 4</p>" },
-  accessories: { name: "Acessórios", item: "<p>TESTANDO 5</p>" },
-  bags: { name: "Bolsas", item: "<p>TESTANDO 6</p>" },
-  beauty: { name: "Beleza", item: "<p>TESTANDO 7</p>" },
-  home: { name: "Casa", item: "<p>TESTANDO 8</p>" },
-  sports: { name: "Esporte", item: "<p>TESTANDO 9</p>" },
-  kids: { name: "Infantil", item: "<p>TESTANDO 10</p>" },
-  promotions: { name: "Promoções", item: "<p>TESTANDO 11</p>" },
-  launches: { name: "Lançamentos", item: "<p>TESTANDO 12</p>" },
-  trends: { name: "Tendências", item: "<p>TESTANDO 13</p>" },
-  mens_fashion: { name: "Moda Masculina", item: "<p>TESTANDO 14</p>" },
-  womens_fashion: { name: "Moda Feminina", item: "<p>TESTANDO 15</p>" },
-  outlet: { name: "Outlet", item: "<p>TESTANDO 16</p>" }
+  new_arrives: {
+    name: categoryNames.NEW_ARRIVES,
+    item: "<new-arrives></new-arrives>"
+  },
+  clothes: { name: categoryNames.CLOTHES, item: "<p>TESTANDO 3</p>" },
+  shoes: { name: categoryNames.SHOES, item: "<p>TESTANDO 4</p>" },
+  accessories: { name: categoryNames.ACCESSORIES, item: "<p>TESTANDO 5</p>" },
+  bags: { name: categoryNames.BAGS, item: "<p>TESTANDO 6</p>" },
+  beauty: { name: categoryNames.BEAUTY, item: "<p>TESTANDO 7</p>" },
+  home: { name: categoryNames.HOME, item: "<p>TESTANDO 8</p>" },
+  sports: { name: categoryNames.SPORTS, item: "<p>TESTANDO 9</p>" },
+  kids: { name: categoryNames.KIDS, item: "<p>TESTANDO 10</p>" },
+  promotions: { name: categoryNames.PROMOTIONS, item: "<p>TESTANDO 11</p>" },
+  launches: { name: categoryNames.LAUNCHES, item: "<p>TESTANDO 12</p>" },
+  trends: { name: categoryNames.TRENDS, item: "<p>TESTANDO 13</p>" },
+  mens_fashion: {
+    name: categoryNames.MENS_FASHION,
+    item: "<p>TESTANDO 14</p>"
+  },
+  womens_fashion: {
+    name: categoryNames.WOMENS_FASHION,
+    item: "<p>TESTANDO 15</p>"
+  },
+  outlet: { name: categoryNames.OUTLET, item: "<p>TESTANDO 16</p>" }
 };
