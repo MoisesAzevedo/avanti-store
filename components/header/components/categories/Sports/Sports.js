@@ -1,8 +1,8 @@
 import { categoryNames } from "../names.js";
 import { subcategoryNames } from "../names.js";
-import "../../../../BorderButton/BorderButton.js";
+import "../../../../BannerNewArrives/BannerNewArrives.js";
 
-class NewArrives extends HTMLElement {
+class Sports extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -13,13 +13,13 @@ class NewArrives extends HTMLElement {
       fetch(new URL("../../../../../shadow-base.css", import.meta.url)).then(
         (res) => res.text()
       ),
-      fetch(new URL("./NewArrives.desktop.css", import.meta.url)).then((res) =>
+      fetch(new URL("./Sports.desktop.css", import.meta.url)).then((res) =>
         res.text()
       )
     ]);
 
-    const category = categoryNames.NEW_ARRIVES;
-    const subcategory = subcategoryNames.NEW_ARRIVES;
+    const category = categoryNames.SPORTS;
+    const subcategory = subcategoryNames.SPORTS;
 
     const subcategoryGroup = [];
     const chunkSize = 8;
@@ -72,12 +72,10 @@ class NewArrives extends HTMLElement {
                 .join("")}
             </div>  
           </div>
+          <banner-new-arrives></banner-new-arrives>
         </seciton>
-        
-        <banner-new-arrives></banner-new-arrives>
-      </div>
     `;
   }
 }
 
-customElements.define("new-arrives", NewArrives);
+customElements.define("sports-category", Sports);

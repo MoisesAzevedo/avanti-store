@@ -1,0 +1,43 @@
+:host {
+}
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 116px;
+  height: 38px;
+
+  border: solid 1px;
+  border-radius: 10px;
+
+  background: radial-gradient(circle, var(--primary) 0%, transparent 110%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0%;
+  transition: background-size 0.1s ease;
+}
+.button-value {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* -- animation--- */
+.button:hover {
+  cursor: pointer;
+  background-size: 250%;
+  opacity: 1;
+  transition: background-size 0.5s ease;
+}
+
+.button:active {
+  background: var(--secondary);
+  color: rgb(189, 189, 189);
+  border-color: rgb(189, 189, 189);
+  transition: background-size 0.3s ease;
+  opacity: 1;
+}
+
+/* ---------------- */

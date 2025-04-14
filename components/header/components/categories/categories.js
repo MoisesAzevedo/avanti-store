@@ -1,5 +1,20 @@
 import { categoryNames } from "./names.js";
 import "./NewArrives/NewArrives.js";
+import "./HomeCategory/HomeCategory.js";
+import "./Clothes/Clothes.js";
+import "./Electro/Electro.js";
+import "./Beauty/Beauty.js";
+import "./Toys/Toys.js";
+import "./Stationery/Stationery.js";
+import "./Pets/Pets.js";
+import "./Sports/Sports.js";
+import "./Kids/Kids.js";
+import "./Sale/Sale.js";
+import "./Market/Market.js";
+import "./Furniture/Furniture.js";
+import "./Automotive/Automotive.js";
+import "./Books/Books.js";
+
 /* import { clothes } from "./clothes.js";
 import { shoes } from "./shoes.js";
 import { accessories } from "./accessories.js";
@@ -41,24 +56,48 @@ export const categories = {
     name: categoryNames.NEW_ARRIVES,
     item: "<new-arrives></new-arrives>"
   },
-  clothes: { name: categoryNames.CLOTHES, item: "<p>TESTANDO 3</p>" },
-  shoes: { name: categoryNames.SHOES, item: "<p>TESTANDO 4</p>" },
-  accessories: { name: categoryNames.ACCESSORIES, item: "<p>TESTANDO 5</p>" },
-  bags: { name: categoryNames.BAGS, item: "<p>TESTANDO 6</p>" },
-  beauty: { name: categoryNames.BEAUTY, item: "<p>TESTANDO 7</p>" },
-  home: { name: categoryNames.HOME, item: "<p>TESTANDO 8</p>" },
-  sports: { name: categoryNames.SPORTS, item: "<p>TESTANDO 9</p>" },
-  kids: { name: categoryNames.KIDS, item: "<p>TESTANDO 10</p>" },
-  promotions: { name: categoryNames.PROMOTIONS, item: "<p>TESTANDO 11</p>" },
-  launches: { name: categoryNames.LAUNCHES, item: "<p>TESTANDO 12</p>" },
-  trends: { name: categoryNames.TRENDS, item: "<p>TESTANDO 13</p>" },
-  mens_fashion: {
-    name: categoryNames.MENS_FASHION,
-    item: "<p>TESTANDO 14</p>"
+  home: { name: categoryNames.HOME, item: "<home-category></home-category>" },
+  clothes: {
+    name: categoryNames.CLOTHES,
+    item: "<clothes-category></clothes-category>"
   },
-  womens_fashion: {
-    name: categoryNames.WOMENS_FASHION,
-    item: "<p>TESTANDO 15</p>"
+  electro: {
+    name: categoryNames.ELECTRO,
+    item: "<electro-category></electro-category>"
   },
-  outlet: { name: categoryNames.OUTLET, item: "<p>TESTANDO 16</p>" }
+  beauty: {
+    name: categoryNames.BEAUTY,
+    item: "<beauty-category></beauty-category>"
+  },
+  toys: { name: categoryNames.TOYS, item: "<toys-category></toys-category>" },
+  stationery: {
+    name: categoryNames.STATIONERY,
+    item: "<stationery-category></stationery-category>"
+  },
+  pets: {
+    name: categoryNames.PETS,
+    item: "<pets-category></pets-category>"
+  },
+  sports: {
+    name: categoryNames.SPORTS,
+    item: "<sports-category></sports-category>"
+  },
+  kids: { name: categoryNames.KIDS, item: "<kids-category></kids-category>" },
+  sale: { name: categoryNames.SALE, item: "<sale-category></sale-category>" },
+  market: {
+    name: categoryNames.MARKET,
+    item: "<market-category></market-category>"
+  },
+  furniture: {
+    name: categoryNames.FURNITURE,
+    item: "<furniture-category></furniture-category>"
+  },
+  automotive: {
+    name: categoryNames.AUTOMOTIVE,
+    item: "<automotive-category></automotive-category>"
+  },
+  books: {
+    name: categoryNames.BOOKS,
+    item: "<Books-category></Books-category>"
+  }
 };

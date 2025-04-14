@@ -1,0 +1,60 @@
+:host {
+}
+
+/* -------- banner -------- */
+
+.banner {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-image: url("/img/images/cup.png");
+
+  width: 236px;
+  height: 298px;
+  border-radius: 10px;
+}
+
+.banner-content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding-left: 27px;
+  padding-right: 27px;
+  padding-top: 43px;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0.74902) -20.45%,
+    rgba(0, 0, 0, 0) 138.31%
+  );
+  border-radius: 10px;
+
+  color: white;
+}
+
+/* --- text --- */
+.text {
+  width: 126px;
+  height: 155px;
+  top: 101px;
+  left: 1027px;
+
+  gap: 0;
+  margin-bottom: 13px;
+}
+
+.text h1 {
+  margin: 0;
+  font-size: 24px;
+  height: 27px;
+}
+
+.first-text h1 {
+  font-weight: 400;
+}
+.second-text h1 {
+  font-weight: 700;
+}
