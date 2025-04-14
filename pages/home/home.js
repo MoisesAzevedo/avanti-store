@@ -1,5 +1,6 @@
 import "../../components/header/Header.js";
 import "../../components/promotion/Promotion.js";
+import "../../components/Banner/Banner.js";
 
 class Home extends HTMLElement {
   constructor() {
@@ -16,6 +17,7 @@ class Home extends HTMLElement {
       <style>${css}</style>
       <promotion-app class="promotion"></promotion-app>
       <header-app></header-app>
+      <banner-component></banner-component>
     `;
   }
 }
