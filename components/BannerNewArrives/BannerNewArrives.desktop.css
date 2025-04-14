@@ -1,4 +1,4 @@
-:host {
+.root {
 }
 
 /* -------- banner -------- */
@@ -7,7 +7,7 @@
   position: absolute;
   right: 20px;
   top: 20px;
-  background-image: url("/avanti-store/img/images/cup.png");
+  background-image: url("/public/img/images/cup.png");
 
   width: 236px;
   height: 298px;

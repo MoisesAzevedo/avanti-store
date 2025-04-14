@@ -16,8 +16,6 @@ class BannerNewArrives extends HTMLElement {
       )
     ]);
 
-    const value = this.getAttribute("value") || "CLIQUE AQUI";
-
     this.shadowRoot.innerHTML = `
         <style>
             ${baseStyles}
