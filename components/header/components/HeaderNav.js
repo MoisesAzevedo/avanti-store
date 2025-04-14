@@ -29,8 +29,8 @@ class NavMenu extends HTMLElement {
        ${Object.entries(all_categories)
          .map(
            ([key, submenuData]) => `
-        <div class="menu-wrapper">
-          <div class="burg-menu"s>
+        <div class="menu-wrapper" id="menu-wrapper-burg">
+          <div class="burg-menu">
             ${burg_menu_svg}
             <div class="all-categories"> <p> ${submenuData.name} </p> </div>
           </div>

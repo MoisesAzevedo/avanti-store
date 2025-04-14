@@ -1,4 +1,12 @@
 @media (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: flex;
+  }
+
   .header-container {
     width: 100%;
     display: flex;

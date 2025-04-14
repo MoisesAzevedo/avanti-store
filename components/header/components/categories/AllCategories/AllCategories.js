@@ -58,6 +58,23 @@ class allCategoriesPlus extends HTMLElement {
     `;
     const listItems = this.shadowRoot.querySelectorAll(".list-item");
 
+    const firstItem = listItems[0];
+    if (firstItem) {
+      const firstContainer = firstItem
+        .closest(".list-wrapper")
+        ?.querySelector(".categories-items-container");
+
+      if (firstContainer) {
+        firstContainer.style.visibility = "visible";
+        firstContainer.style.pointerEvents = "auto";
+      }
+
+      firstItem.style.color = "var(--primary)";
+      firstItem.style.fontWeight = "700";
+      firstItem.style.cursor = "pointer";
+      firstItem.style.transition = "var(--hover-transition)";
+    }
+
     //mouseouver to .list-item
     listItems.forEach((item) => {
       item.addEventListener("mouseover", () => {

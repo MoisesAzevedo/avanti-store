@@ -27,4 +27,8 @@ body {
 
   /* animations */
   --hover-transition: 200ms;
+
+  /* breakpoints (non-functional on css) */
+  --desktop-min: 768px;
+  --mobile-max: 767px;
 }

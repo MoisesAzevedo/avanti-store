@@ -1,0 +1,58 @@
+@media (max-width: 767px) {
+  .promotion-container {
+    background-color: var(--primary);
+    color: rgba(255, 255, 255, 1);
+
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    margin: 0;
+
+    width: 100%;
+    height: 52;
+  }
+
+  /* ---------- Text ---------- */
+  .text {
+    display: none;
+  }
+
+  .text-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .diferent-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.3rem;
+
+    background-color: rgba(98, 32, 193, 1);
+    border-radius: 4px;
+
+    height: 16px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .light-text {
+    font-weight: 10;
+
+    transform: skewX(-5deg);
+  }
+  /* ---------- */
+}
