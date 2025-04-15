@@ -26,7 +26,7 @@ class Banner extends HTMLElement {
         <div>
           <section class="container">
             <div class="content">
-                <img src="../../img/images/chair-clothes.png" class="banner-img"></img>
+                <img src="img/images/chair-clothes.png" class="banner-img"></img>
                 <div class="text">
                     <div class="title1">
                         <h1>SUPER</h1>
