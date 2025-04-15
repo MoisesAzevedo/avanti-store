@@ -6,7 +6,7 @@ class Banner extends HTMLElement {
 
   async connectedCallback() {
     const [baseStyles, desktopStyles, mobileStyles] = await Promise.all([
-      fetch(new URL("../../shadow-base.css", import.meta.url)).then((res) =>
+      fetch(new URL("../../../shadow-base.css", import.meta.url)).then((res) =>
         res.text()
       ),
       fetch(new URL("./Banner.desktop.css", import.meta.url)).then((res) =>
@@ -23,7 +23,6 @@ class Banner extends HTMLElement {
           ${desktopStyles}
           ${mobileStyles}
         </style>
-        <div>
           <section class="container">
             <div class="content">
                 <img src="img/images/chair-clothes.png" class="banner-img"></img>
@@ -38,9 +37,8 @@ class Banner extends HTMLElement {
                     <h1 class="title3">50%OFF</h1>
                 </div>            
             </div>
-
           </section>
-        </div>
+       
       `;
   }
 }
