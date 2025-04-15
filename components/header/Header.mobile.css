@@ -19,8 +19,8 @@
     align-items: center;
     width: 100%;
 
-    padding: 16px;
     padding-top: 22px;
+    padding-bottom: 16px;
     gap: 27px;
   }
 

@@ -39,4 +39,12 @@
     height: 536px;
     gap: 22px;
   }
+
+  .text h1 {
+    font-size: 30px;
+  }
+
+  .text p {
+    font-size: 18px;
+  }
 }
