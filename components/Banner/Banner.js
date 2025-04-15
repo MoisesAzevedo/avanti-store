@@ -25,7 +25,18 @@ class Banner extends HTMLElement {
         </style>
         <div>
           <section class="container">
-            ola
+            <div class="content">
+                <img src="../../img/images/chair-clothes.png" class="banner-img"></img>
+                <div class="text">
+                    <div class="title1">
+                        <h1>SUPER</h1>
+                        <h1>SALE</h1>
+                    </div>
+                    <h2 class="title2">I T E N S    S E L E C I O N A D O S    C O M    A T É</h2>
+                    <h1 class="title3">50%OFF</h1>
+                </div>            
+            </div>
+
           </section>
         </div>
       `;
