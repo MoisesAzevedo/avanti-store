@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 390px;
+    width: 100%;
 
     padding: 16px;
     padding-top: 22px;
@@ -68,6 +68,8 @@
     align-items: center;
 
     width: 148px;
+
+    color: black;
   }
 
   /* ------ Search bar --------- */
@@ -85,12 +87,12 @@
   }
 
   .search-input {
-    width: 361px;
+    width: 341px;
     height: 40px;
     border-radius: 10px;
     border: solid 1px;
     border-color: rgba(221, 221, 221, 1);
-    padding-left: 24px;
+    padding-left: 20px;
   }
 
   .search-input:focus {

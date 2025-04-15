@@ -24,6 +24,10 @@
     left: 0;
   }
 
+  .banner-img-mobile {
+    display: none;
+  }
+
   /* ------------- text ----------- */
   .text {
     display: flex;
@@ -52,6 +56,9 @@
 
   .title1 h1:nth-child(1) {
     font-weight: 700;
+  }
+  .title2-mobile {
+    display: none;
   }
 
   .title2 {

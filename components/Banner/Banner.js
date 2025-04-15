@@ -27,12 +27,14 @@ class Banner extends HTMLElement {
           <section class="container">
             <div class="content">
                 <img src="img/images/chair-clothes.png" class="banner-img"></img>
+                <img src="img/images/chair-clothes-mobile.png" class="banner-img-mobile"></img>
                 <div class="text">
                     <div class="title1">
                         <h1>SUPER</h1>
                         <h1>SALE</h1>
                     </div>
                     <h2 class="title2">I T E N S    S E L E C I O N A D O S    C O M    A T É</h2>
+                    <h2 class="title2-mobile">SELECIONE ITENS EM ATÉ</h2>
                     <h1 class="title3">50%OFF</h1>
                 </div>            
             </div>
