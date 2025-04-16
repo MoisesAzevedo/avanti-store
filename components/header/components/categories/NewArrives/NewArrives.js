@@ -1,6 +1,5 @@
 import { categoryNames } from "../names.js";
 import { subcategoryNames } from "../names.js";
-import "../../../../BorderButton/BorderButton.js";
 
 class NewArrives extends HTMLElement {
   constructor() {

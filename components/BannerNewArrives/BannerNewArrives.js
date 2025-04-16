@@ -1,4 +1,4 @@
-import "../BorderButton/BorderButton.js";
+import "../buttons/BorderButton/BorderButton.js";
 
 class BannerNewArrives extends HTMLElement {
   constructor() {

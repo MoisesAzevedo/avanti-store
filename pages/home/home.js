@@ -4,6 +4,7 @@ import "../../components/banners/Banner/Banner.js";
 import "../../components/banners/CupBanner/CupBanner.js";
 import "../../components/banners/MapBanner/MapBanner.js";
 import "../../components/banners/TextBanner/TextBanner.js";
+import "../../components/forms/NewsletterSign/NewsletterSign.js";
 
 class Home extends HTMLElement {
   constructor() {
@@ -24,6 +25,7 @@ class Home extends HTMLElement {
       <cup-banner></cup-banner>
       <map-banner></map-banner>
       <text-banner></text-banner>
+      <newsletter-sign></newsletter-sign>
     `;
   }
 }

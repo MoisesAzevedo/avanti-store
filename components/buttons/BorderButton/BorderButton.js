@@ -6,11 +6,11 @@ class BorderButton extends HTMLElement {
 
   async connectedCallback() {
     const [baseStyles, customStyles] = await Promise.all([
-      fetch(new URL("../../shadow-base.css", import.meta.url)).then((res) =>
+      fetch(new URL("../../../shadow-base.css", import.meta.url)).then((res) =>
         res.text()
       ),
-      fetch(new URL("./BorderButton.desktop.css", import.meta.url)).then(
-        (res) => res.text()
+      fetch(new URL("./BorderButton.css", import.meta.url)).then((res) =>
+        res.text()
       )
     ]);
 

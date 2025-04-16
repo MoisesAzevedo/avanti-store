@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+}
+
+.button {
+  width: 121px;
+  height: 48px;
+  border-radius: 8px;
+
+  background-color: var(--primary);
+  border: none;
+
+  cursor: pointer;
+
+  font-weight: 700;
+  color: white;
+  transition: var(--hover-transition);
+}
+
+.button:hover {
+  background-color: rgb(0, 62, 168);
+  transition: var(--hover-transition);
+}
+
+.button:active {
+  background-color: rgb(0, 40, 110);
+  color: rgb(185, 185, 185);
+  transition: var(--hover-transition);
+}

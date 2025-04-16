@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  margin-top: 64px;
+}
+
+.content {
+  width: 1260px;
+  height: 227px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* -- title --  */
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  padding: 0;
+
+  background-color: var(--body-color);
+}
+
+.diferent-h2 {
+  color: var(--primary);
+}
+
+/* -- form -- */
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  height: 176px;
+  background-color: rgba(222, 222, 222, 1);
+  border-radius: 8px;
+}
+
+/* -- options -- */
+.option {
+  font-size: 12px;
+  color: rgba(48, 48, 48, 1);
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+a {
+  color: rgba(48, 48, 48, 1);
+}
+a:hover {
+  color: rgb(0, 0, 0);
+}
+
+/* -- _____ -- */
