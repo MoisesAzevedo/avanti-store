@@ -1,0 +1,98 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 819px;
+
+  font-family: var(--rounded-font);
+  background-color: rgba(222, 222, 222, 1);
+}
+
+.content {
+  width: 1177px;
+  height: 728px;
+
+  display: flex;
+  gap: 49px;
+}
+
+/* ---- text --- */
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+  margin-top: 80px;
+}
+
+.title h1 {
+  font-weight: 700;
+  color: rgba(79, 79, 79, 1);
+  font-size: 30px;
+}
+
+.paragraph {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.paragraph p {
+  width: 360px;
+  height: 125px;
+
+  font-size: 18px;
+  font-weight: 400px;
+}
+/* ---- icon --- */
+.icon {
+  display: flex;
+
+  margin: 0;
+
+  width: 89px;
+  height: 89px;
+
+  color: transparent;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+.icon div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--primary);
+
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+/* ---- image --- */
+.image-mobile {
+  display: none;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 652px;
+  height: 728px;
+
+  margin: 0;
+
+  background-image: url("img/images/cup-square.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ---- ____ --- */
