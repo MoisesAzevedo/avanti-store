@@ -1,13 +1,4 @@
 /* global styles for shadow DOM */
-
-p {
-  margin: 0;
-  margin-left: 0.3rem;
-  padding: 0;
-  line-height: 1.5;
-  font-size: var(--default-font-size);
-}
-
 ul {
   margin: 0;
   padding: 0;
@@ -19,6 +10,15 @@ li {
   padding: 0;
 }
 
+/* -- text -- */
+p {
+  margin: 0;
+  margin-left: 0.3rem;
+  padding: 0;
+  line-height: 1.5;
+  font-size: var(--default-font-size);
+}
+
 h1 {
   white-space: pre;
   margin: 0;
@@ -26,4 +26,10 @@ h1 {
 
 h2 {
   white-space: pre;
+}
+
+/* -- containers -- */
+
+figure {
+  margin: 0;
 }

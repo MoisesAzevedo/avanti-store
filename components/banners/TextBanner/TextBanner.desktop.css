@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--rounded-font);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 660px;
+
+  background-image: url("img/images/avanti-room.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 132px;
+
+  background-color: var(--primary);
+
+  color: white;
+}
+.text p {
+  font-size: 30px;
+}

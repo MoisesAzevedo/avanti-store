@@ -3,6 +3,7 @@ import "../../components/promotion/Promotion.js";
 import "../../components/banners/Banner/Banner.js";
 import "../../components/banners/CupBanner/CupBanner.js";
 import "../../components/banners/MapBanner/MapBanner.js";
+import "../../components/banners/TextBanner/TextBanner.js";
 
 class Home extends HTMLElement {
   constructor() {
@@ -22,6 +23,7 @@ class Home extends HTMLElement {
       <banner-component></banner-component>
       <cup-banner></cup-banner>
       <map-banner></map-banner>
+      <text-banner></text-banner>
     `;
   }
 }
