@@ -1,0 +1,35 @@
+@media (max-width: 767px) {
+  .container {
+    margin-top: 56px;
+  }
+
+  .content {
+    width: 358px;
+  }
+
+  /* -- title --  */
+  .title h2 {
+    font-size: 16px;
+  }
+  /* -- form -- */
+  .form {
+    background-color: rgba(245, 245, 245, 1);
+  }
+  .form-content {
+    flex-direction: column;
+    width: 326px;
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+
+  /* --- input-text -- */
+  .input-text {
+    width: 100%;
+  }
+
+  /* --- button -- */
+
+  .button {
+    width: 100%;
+  }
+}

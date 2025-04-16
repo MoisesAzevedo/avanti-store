@@ -33,15 +33,20 @@ class NewsletterSign extends HTMLElement {
                     <h2 class="diferent-h2">newsletter</h2>        
                 </div>
                 <form class="form">
-                    <default-input placeholder="Digite seu nome"></default-input>
-                    <default-input placeholder="Digite seu e-mail"></default-input>
-                    <label class="option">
-                        <input type="checkbox" class="checkbox" name="allow" >
-                        Estou de acordo com a 
-                        <a href="https://penseavanti.com.br/politica-de-privacidade/" target="blank">Política de privacidade</a>
-                     </label>
-      
-                    <default-button value="Cadastrar"></default-button>
+                    <div class="form-content">
+                        <default-input placeholder="Digite seu nome" class="input-text"></default-input>
+                        <default-input placeholder="Digite seu e-mail" class="input-text"></default-input>
+                        <label class="option">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" class="hidden-checkbox" />
+                                <span class="custom-checkbox"></span>
+                            </label>
+                            Estou de acordo com a 
+                            <a href="https://penseavanti.com.br/politica-de-privacidade/" target="blank">Política de privacidade</a>
+                        </label>
+                        
+                        <default-button value="Cadastrar" class="button"></default-button>
+                    </div>
                 </form>
             </div>
         </section>

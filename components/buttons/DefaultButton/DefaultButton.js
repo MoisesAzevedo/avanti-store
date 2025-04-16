@@ -21,8 +21,8 @@ class DefaultButton extends HTMLElement {
           ${baseStyles}
           ${customStyles}
         </style>
-        <section class=”container”>
-          <button class="button" >${value}</button>
+        <section class="container">
+          <button class="default-button" >${value}</button>
         </section>
       `;
   }

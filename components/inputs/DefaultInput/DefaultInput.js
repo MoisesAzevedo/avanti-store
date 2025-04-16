@@ -24,7 +24,7 @@ class DefaultInput extends HTMLElement {
         </style>
         <section class="container">
           <input 
-            class="input-text"
+            class="default-input"
             placeholder="${placeholder}"
             value="${value}"
           />

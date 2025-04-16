@@ -9,7 +9,6 @@
 
 .content {
   width: 1260px;
-  height: 227px;
 
   display: flex;
   flex-direction: column;
@@ -19,15 +18,21 @@
 
 .title {
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: 5px;
-
   padding: 0;
 
   background-color: var(--body-color);
-}
 
+  margin-bottom: 24px;
+
+  color: black;
+}
+.title h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
 .diferent-h2 {
   color: var(--primary);
 }
@@ -37,28 +42,80 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
 
-  height: 176px;
   background-color: rgba(222, 222, 222, 1);
   border-radius: 8px;
+}
+
+.form-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+/* -- input-text */
+.input-text {
+  display: flex;
+  width: 280px;
+  height: 48px;
 }
 
 /* -- options -- */
 .option {
   font-size: 12px;
-  color: rgba(48, 48, 48, 1);
+  color: rgba(101, 101, 101, 1);
+  font-weight: 700;
 
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
+.hidden-checkbox {
+  display: none;
+}
+
+/* chackbox */
+.custom-checkbox {
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid rgba(221, 221, 221, 1);
+  border-radius: 4px;
+  background-color: white;
+
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.checkbox-wrapper input:checked + .custom-checkbox::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  width: 4px;
+  height: 8px;
+  border: solid var(--primary);
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* anchor */
 a {
-  color: rgba(48, 48, 48, 1);
+  color: rgba(101, 101, 101, 1);
 }
 a:hover {
   color: rgb(0, 0, 0);
 }
 
-/* -- _____ -- */
+/* -- button -- */
+
+.button {
+  display: flex;
+  width: 121px;
+  height: 48px;
+}
