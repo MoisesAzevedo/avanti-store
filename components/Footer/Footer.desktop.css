@@ -1,0 +1,117 @@
+.container {
+  margin-top: 40px;
+  margin-bottom: 23px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* -- resources -- */
+.resources {
+  display: flex;
+  justify-content: center;
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  width: 100%;
+
+  background-color: rgba(245, 245, 245, 1);
+}
+
+.wrapper-resources {
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+}
+
+/* social */
+.social-and-links {
+  display: flex;
+  width: 100%;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.logo {
+  color: black;
+}
+
+.media {
+  display: flex;
+  color: var(--primary);
+  gap: 40px;
+}
+
+/* links */
+
+.links {
+  display: flex;
+  margin-left: 142px;
+  gap: 110px;
+}
+
+.links h4 {
+  color: black;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--font-color-secondary);
+}
+
+.links h5 {
+  height: 14px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--font-color-secondary);
+
+  width: max-content;
+}
+
+.links a {
+  color: var(--font-color-secondary);
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: black;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.institutional,
+.help,
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.institutional {
+  width: 158.74px;
+}
+
+.help {
+  width: 145.45px;
+}
+
+.phone,
+.email {
+  display: flex;
+}
+
+.phone h5:first-of-type,
+.email h5:first-of-type,
+.service-hour h5:first-of-type {
+  font-weight: 700;
+}
+
+.service-hour {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* -- resources -- */

@@ -26,6 +26,7 @@ body {
   --default-font: "Nunito Sans", sans-serif;
   --rounded-font: "Nunito", sans-serif;
   --default-font-size: 14px;
+  --font-color-secondary: rgba(48, 48, 48, 1);
 
   /* animations */
   --hover-transition: 200ms;

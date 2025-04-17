@@ -1,10 +1,11 @@
-import "../../components/header/Header.js";
-import "../../components/promotion/Promotion.js";
+import "../../components/Header/Header.js";
+import "../../components/Promotion/Promotion.js";
 import "../../components/banners/Banner/Banner.js";
 import "../../components/banners/CupBanner/CupBanner.js";
 import "../../components/banners/MapBanner/MapBanner.js";
 import "../../components/banners/TextBanner/TextBanner.js";
 import "../../components/forms/NewsletterSign/NewsletterSign.js";
+import "../../components/Footer/Footer.js";
 
 class Home extends HTMLElement {
   constructor() {
@@ -26,6 +27,7 @@ class Home extends HTMLElement {
       <map-banner></map-banner>
       <text-banner></text-banner>
       <newsletter-sign></newsletter-sign>
+      <footer-app></footer-app>
     `;
   }
 }

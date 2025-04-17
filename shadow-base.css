@@ -19,13 +19,13 @@ p {
   font-size: var(--default-font-size);
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   white-space: pre;
   margin: 0;
-}
-
-h2 {
-  white-space: pre;
 }
 
 /* -- containers -- */

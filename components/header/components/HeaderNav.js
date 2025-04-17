@@ -44,12 +44,15 @@ class NavMenu extends HTMLElement {
 
         <div class="categories">
           ${Object.entries(categories)
-            .slice(0, 11)
+            .slice(0, 10)
             .map(
               ([key, submenuData]) => `
            
                 <div class="menu-wrapper" ">
-                  <div class="category-label"><p>${submenuData.name}</p></div>
+                  <div class="category-label">
+                  <p>${submenuData.name}</p>
+                  <p class="hidden">${submenuData.name}</p>
+                  </div>
                   <div class="home-menu-container  ">
                     <div class="home-menu">${submenuData.item}</div>
                   </div>

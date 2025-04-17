@@ -1,6 +1,6 @@
 import { categoryNames } from "../names.js";
 import { subcategoryNames } from "../names.js";
-import "../../../../BannerNewArrives/BannerNewArrives.js";
+import "../../../../banners/BannerNewArrives/BannerNewArrives.js";
 
 class Electro extends HTMLElement {
   constructor() {

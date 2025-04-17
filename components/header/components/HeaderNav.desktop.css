@@ -18,17 +18,20 @@
 
   .category-label {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    position: relative;
+    margin-right: 45px;
 
-    width: 91px;
+    cursor: pointer;
+
     height: 100%;
   }
 
-  .category-label p {
-    position: absolute;
+  .hidden {
+    margin-top: -38px;
+    font-weight: 700;
+    visibility: hidden;
   }
 
   /* -------- burg menu -------- */

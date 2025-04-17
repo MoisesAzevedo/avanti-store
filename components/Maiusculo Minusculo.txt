@@ -1,0 +1,2 @@
+As pastas que iniciarem com letra minúscula, são diretórios com vários componentes daquele tipo.
+A pasta que iniciar com letra Maiúscula, é a pasta do componente.

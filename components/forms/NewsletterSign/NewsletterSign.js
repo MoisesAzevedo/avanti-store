@@ -42,7 +42,7 @@ class NewsletterSign extends HTMLElement {
                                 <span class="custom-checkbox"></span>
                             </label>
                             Estou de acordo com a 
-                            <a href="https://penseavanti.com.br/politica-de-privacidade/" target="blank">Política de privacidade</a>
+                            <a href="https://penseavanti.com.br/politica-de-privacidade/" target="_blank">Política de Privacidade</a>
                         </label>
                         
                         <default-button value="Cadastrar" class="button"></default-button>
