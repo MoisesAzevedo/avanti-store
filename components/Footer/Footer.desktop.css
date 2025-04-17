@@ -38,6 +38,7 @@
 
 .logo {
   color: black;
+  width: 152px;
 }
 
 .media {
@@ -114,4 +115,52 @@
   gap: 10px;
 }
 
-/* -- resources -- */
+/* -- payment -- */
+
+.payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  margin-top: 64px;
+}
+
+.payment-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 33px;
+
+  color: var(--font-color-secondary);
+  width: 545px;
+}
+
+/* ------------- Certificate ---------------- */
+.certificate {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  width: 100%;
+}
+
+.wrapper-certificate {
+  width: 1160px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.logos-certificate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+
+.logo-avanti svg {
+  width: 57px;
+}
+/* ------------- ___________ ---------------- */
