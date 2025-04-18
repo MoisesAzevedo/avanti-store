@@ -1,0 +1,73 @@
+@media (max-width: 767px) {
+  .container {
+    margin-bottom: 15px;
+  }
+
+  /* -- resources -- */
+  .resources {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .wrapper-resources {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 2px);
+  }
+
+  /* social */
+  .social-and-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .social {
+    width: 194px;
+    align-items: center;
+  }
+
+  /* links */
+  .links-desktop {
+    display: none;
+  }
+
+  .links-mobile {
+    display: flex;
+    width: calc(100% - 2px);
+  }
+
+  /* ---- payment ---- */
+
+  .payment {
+    margin-top: 48px;
+  }
+
+  .payment-content {
+    width: 295px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* centra cada linha */
+    gap: 34px;
+  }
+
+  /* ----- certificate ----- */
+
+  .wrapper-certificate {
+    width: 358px;
+  }
+
+  .text-certificate-desktop {
+    display: none;
+  }
+  p {
+    margin: 0;
+  }
+  .text-certificate-mobile {
+    font-size: 12px;
+    display: flex;
+    width: 100%;
+    text-align: center;
+  }
+}

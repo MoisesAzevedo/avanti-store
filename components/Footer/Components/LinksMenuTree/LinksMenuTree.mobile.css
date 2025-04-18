@@ -1,0 +1,66 @@
+.links-desktop {
+  display: flex;
+  width: 100%;
+  margin-left: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.links-desktop h4 {
+  color: black;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--font-color-secondary);
+}
+
+.links-desktop h5 {
+  height: 14px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--font-color-secondary);
+  width: max-content;
+}
+
+.links-desktop a {
+  color: var(--font-color-secondary);
+  text-decoration: underline;
+}
+
+.links-desktop a:hover {
+  color: black;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.institutional,
+.help,
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.institutional {
+  width: 158.74px;
+}
+
+.help {
+  width: 145.45px;
+}
+
+.phone,
+.email {
+  display: flex;
+}
+
+.phone h5:first-of-type,
+.email h5:first-of-type,
+.service-hour h5:first-of-type {
+  font-weight: 700;
+}
+
+.service-hour {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

@@ -28,6 +28,12 @@ h5 {
   margin: 0;
 }
 
+a,
+button,
+div {
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* -- containers -- */
 
 figure {

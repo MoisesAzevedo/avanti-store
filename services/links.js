@@ -6,3 +6,10 @@ export const links_service = {
   home: "https://penseavanti.com.br/",
   talk: "https://penseavanti.com.br/quem-somos/#form-contact"
 };
+
+export const links_media = {
+  instagram: "https://www.instagram.com/penseavanti/",
+  facebook: "https://www.facebook.com/avantimarketingdigital",
+  youtube: "https://www.youtube.com/@penseavanti/videos",
+  tiktok: "#"
+};

@@ -3,8 +3,6 @@ import { instagram_svg } from "@img/icons/instagram.js";
 import { facebook_svg } from "@img/icons/facebook.js";
 import { youtube_svg } from "@img/icons/youtube.js";
 import { tiktok_svg } from "@img/icons/tiktok.js";
-import { links_service } from "../../services/links.js";
-import { contact_service } from "../../services/contact.js";
 import { amex_svg } from "@img/icons/payment/amex.js";
 import { mastercard_svg } from "@img/icons/payment/mastercard.js";
 import { visa_svg } from "@img/icons/payment/visa.js";
@@ -17,6 +15,14 @@ import { boleto_svg } from "@img/icons/payment/boleto.js";
 import { lets_encript_svg } from "@img/logos/lets_encript.js";
 import { vtex_pci_svg } from "@img/logos/vtex_pci.js";
 import { vtex_svg } from "@img/logos/vtex.js";
+import { links_service } from "../../services/links.js";
+import { links_media } from "../../services/links.js";
+import { contact_service } from "../../services/contact.js";
+
+import "../menu/MenuTree/MenuTree.js";
+import "./Components/LinksMenuTree/InstitutionalMenu.js";
+import "./Components/LinksMenuTree/HelpMenu.js";
+import "./Components/LinksMenuTree/ServicesMenu.js";
 
 class Footer extends HTMLElement {
   constructor() {
@@ -37,8 +43,17 @@ class Footer extends HTMLElement {
       )
     ]);
 
-    const urls = links_service;
+    const service_url = links_service;
+    const media_url = links_media;
     const contact = contact_service;
+    const menuTreeContent = [
+      {
+        title: "Institucional",
+        content: ["<institutional-menu></institutional-menu>"]
+      },
+      { title: "Central de Ajuda", content: ["<help-menu></help-menu>"] },
+      { title: "Atendimento", content: ["<services-menu></services-menu>"] }
+    ];
 
     this.shadowRoot.innerHTML = `
         <style>
@@ -49,33 +64,73 @@ class Footer extends HTMLElement {
         <section class="container">
             <section class="resources">
                 <div class="wrapper-resources">
+
                     <div class="social-and-links">
                         <figure class="social">
-                             <div class="logo">
-                                ${logo_svg}
-                             </div>
-                             <div class="media">
+                            <div class="logo">
+                              ${logo_svg}
+                            </div>
+                            <div class="media">
+                              <a href="${
+                                media_url.instagram
+                              }" class="media-link" target="_blank" rel="noopener noreferrer">
                                 ${instagram_svg}
+                              </a>
+                              <a href="${
+                                media_url.facebook
+                              }" class="media-link" target="_blank" rel="noopener noreferrer">
                                 ${facebook_svg}
+                              </a>
+                              <a href="${
+                                media_url.youtube
+                              }" target="_blank" rel="noopener noreferrer">
                                 ${youtube_svg}
-                                ${tiktok_svg} 
-                             </div>
+                              </a>
+                              <a href="${
+                                media_url.tiktok
+                              }"  class="media-link" target="_blank" rel="noopener noreferrer">
+                                ${tiktok_svg}
+                              </a>
+                            </div>
                         </figure>
-                        <ul class="links">
+                   
+                        <menu-tree class="links-mobile" itemContent='${JSON.stringify(
+                          menuTreeContent
+                        )}'></menu-tree>
+
+                        <ul class="links-desktop">
                             <li class="institutional">
                                 <h4>Institucional</h4>
-                                <h5><a href="${urls.about}" target="_blank" rel="noopener noreferrer">Sobre Nós</a></h5>
-                                <h5><a href="${urls.store}" target="_blank" rel="noopener noreferrer">Nossas Lojas</a></h5>
-                                <h5><a href="${urls.privacy}" target="_blank" rel="noopener noreferrer">Privacidade e Segurança</a></h5>
-                                <h5><a href="${urls.home}" target="_blank" rel="noopener noreferrer">Termos e Condições</a></h5>
+                                <h5><a href="${
+                                  service_url.about
+                                }" target="_blank" rel="noopener noreferrer">Sobre Nós</a></h5>
+                                <h5><a href="${
+                                  service_url.store
+                                }" target="_blank" rel="noopener noreferrer">Nossas Lojas</a></h5>
+                                <h5><a href="${
+                                  service_url.privacy
+                                }" target="_blank" rel="noopener noreferrer">Privacidade e Segurança</a></h5>
+                                <h5><a href="${
+                                  service_url.home
+                                }" target="_blank" rel="noopener noreferrer">Termos e Condições</a></h5>
                             </li>
                             <li class="help">
                                 <h4>Central de Ajuda</h4>
-                                <h5><a href="${urls.talk}" target="_blank" rel="noopener noreferrer">Fale Conosco</a></h5>
-                                <h5><a href="${urls.home}" target="_blank" rel="noopener noreferrer">Frete e Entregas</a></h5>
-                                <h5><a href="${urls.home}" target="_blank" rel="noopener noreferrer">Trocas e Devoluções</a></h5>
-                                <h5><a href="${urls.home}" target="_blank" rel="noopener noreferrer">Formas de Pagamento</a></h5>                            
-                                <h5><a href="${urls.home}" target="_blank" rel="noopener noreferrer">FAQ</a></h5>                            
+                                <h5><a href="${
+                                  service_url.talk
+                                }" target="_blank" rel="noopener noreferrer">Fale Conosco</a></h5>
+                                <h5><a href="${
+                                  service_url.home
+                                }" target="_blank" rel="noopener noreferrer">Frete e Entregas</a></h5>
+                                <h5><a href="${
+                                  service_url.home
+                                }" target="_blank" rel="noopener noreferrer">Trocas e Devoluções</a></h5>
+                                <h5><a href="${
+                                  service_url.home
+                                }" target="_blank" rel="noopener noreferrer">Formas de Pagamento</a></h5>                            
+                                <h5><a href="${
+                                  service_url.home
+                                }" target="_blank" rel="noopener noreferrer">FAQ</a></h5>                            
                             </li>
                             <li class="services">
                                 <h4>Atendimento</h4>
@@ -89,8 +144,12 @@ class Footer extends HTMLElement {
                                 </div>
                                 <div class="service-hour">
                                     <h5>Horário de atendimento:</h5>
-                                    <h5>Segunda a Sábado: ${contact.hour.mon_sun_start} às ${contact.hour.mon_sun_end}</h5>
-                                    <h5>Domingos e Feriados: ${contact.hour.non_working_start} às ${contact.hour.non_working_end}</h5>
+                                    <h5>Segunda a Sábado: ${
+                                      contact.hour.mon_sun_start
+                                    } às ${contact.hour.mon_sun_end}</h5>
+                                    <h5>Domingos e Feriados: ${
+                                      contact.hour.non_working_start
+                                    } às ${contact.hour.non_working_end}</h5>
                                 </div>                                
                             </li>
                         </ul>
@@ -113,7 +172,7 @@ class Footer extends HTMLElement {
             <section class="certificate">
               <div class="wrapper-certificate">
                 <article class="text-certificate">
-                  <p>
+                  <p class="text-certificate-desktop">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
                     nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut 
                     wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
@@ -122,6 +181,9 @@ class Footer extends HTMLElement {
                     dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio 
                     dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te 
                     feugait nulla facilisi.
+                  </p>
+                  <p class="text-certificate-mobile">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.
                   </p>
                 </article>
                 <figure class="logos-certificate">

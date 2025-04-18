@@ -43,26 +43,41 @@
 
 .media {
   display: flex;
-  color: var(--primary);
   gap: 40px;
+}
+
+.media a {
+  color: var(--primary);
+
+  transition: var(--hover-transition);
+}
+
+.media svg:hover {
+  cursor: pointer;
+  color: var(--font-color-secondary);
+  transition: var(--hover-transition);
 }
 
 /* links */
 
-.links {
+.links-mobile {
+  display: none;
+}
+
+.links-desktop {
   display: flex;
   margin-left: 142px;
   gap: 110px;
 }
 
-.links h4 {
+.links-desktop h4 {
   color: black;
   font-weight: 700;
   font-size: 14px;
   color: var(--font-color-secondary);
 }
 
-.links h5 {
+.links-desktop h5 {
   height: 14px;
   font-size: 14px;
   font-weight: 400;
@@ -71,12 +86,12 @@
   width: max-content;
 }
 
-.links a {
+.links-desktop a {
   color: var(--font-color-secondary);
   text-decoration: none;
 }
 
-.links a:hover {
+.links-desktop a:hover {
   color: black;
   font-weight: 700;
   text-decoration: underline;
@@ -133,7 +148,7 @@
   gap: 33px;
 
   color: var(--font-color-secondary);
-  width: 545px;
+  width: max-content;
 }
 
 /* ------------- Certificate ---------------- */
@@ -153,14 +168,23 @@
   gap: 40px;
 }
 
+.text-certificate-mobile {
+  display: none;
+}
+.text-certificate-desktop {
+  width: 1237px;
+  text-align: center;
+}
+
 .logos-certificate {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 48px;
+  gap: 24px;
 }
 
 .logo-avanti svg {
   width: 57px;
+  margin-left: 24px;
 }
 /* ------------- ___________ ---------------- */
