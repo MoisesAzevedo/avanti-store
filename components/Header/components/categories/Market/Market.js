@@ -13,7 +13,7 @@ class Market extends HTMLElement {
       fetch(new URL("../../../../../shadow-base.css", import.meta.url)).then(
         (res) => res.text()
       ),
-      fetch(new URL("./Market.desktop.css", import.meta.url)).then((res) =>
+      fetch(new URL("../default.css", import.meta.url)).then((res) =>
         res.text()
       )
     ]);

@@ -80,12 +80,14 @@ sl-carousel::part(base) {
   display: flex;
   align-items: center;
   justify-content: center;
-
   position: absolute;
+
   width: 30px;
   height: 30px;
-  transform: translateY(-50%);
+
   z-index: 1;
+
+  transform: translateY(-50%);
   cursor: pointer;
 }
 

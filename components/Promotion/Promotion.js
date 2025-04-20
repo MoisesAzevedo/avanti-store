@@ -34,8 +34,8 @@ class Promotion extends HTMLElement {
                   <p> de desconto no seu primeiro pedido. </p>
                 </div>
                 <div class="line">
-                  <p> Utilize o cupom</p>
-                  <p class="light-text">DESCONTO10</p>
+                  <p> Utilize o cupom </p>
+                  <p class="light-text"> DESCONTO10</p>
                 </div>
             </div>
         </section>

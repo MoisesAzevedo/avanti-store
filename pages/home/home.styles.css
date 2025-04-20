@@ -1,18 +1,14 @@
-/* mobile */
+/* -----------mobile */
 @media (max-width: 767px) {
   .banner,
-  .carousel-mobile,
+  .carousel-first,
   .cup-banner-first,
   .map-banner,
   .cup-banner-second,
   .text-banner {
     margin-bottom: 56px;
   }
-  .carousel-mobile {
-    display: block;
-  }
 
-  .carousel-first,
   .carousel-second {
     display: none;
   }
@@ -22,6 +18,7 @@
   }
 }
 
+/* -------- desktop */
 @media (min-width: 768px) {
   .banner,
   .carousel-first {
@@ -38,10 +35,6 @@
   .carousel-second,
   .text-banner {
     margin-bottom: 64px;
-  }
-
-  .carousel-mobile {
-    display: none;
   }
 
   .newsletter-sign {

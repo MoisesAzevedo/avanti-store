@@ -20,9 +20,20 @@ class LoopCarouselSl extends HTMLElement {
       )
     ]);
 
-    const clothes_slice1 = clothes_service.slice(0, 5);
-    const clothes_slice2 = clothes_service.slice(5, 10);
-    const clothes_slice3 = clothes_service.slice(10, 15);
+    let clothes_slice1 = [];
+    let clothes_slice2 = [];
+    let clothes_slice3 = [];
+
+    /* responsiveness display */
+    if (window.innerWidth >= 768) {
+      clothes_slice1 = clothes_service.slice(0, 5);
+      clothes_slice2 = clothes_service.slice(5, 10);
+      clothes_slice3 = clothes_service.slice(10, 15);
+    } else {
+      clothes_slice1 = clothes_service.slice(0, 2);
+      clothes_slice2 = clothes_service.slice(2, 4);
+      clothes_slice3 = clothes_service.slice(4, 6);
+    }
 
     this.innerHTML = `
       <style>
@@ -183,6 +194,7 @@ class LoopCarouselSl extends HTMLElement {
     `;
 
     const carousel = this.querySelector(".my-carousel");
+    const container = this.querySelector(".container");
 
     await customElements.whenDefined("sl-carousel");
 
@@ -193,6 +205,34 @@ class LoopCarouselSl extends HTMLElement {
     this.querySelector("#next-btn").addEventListener("click", () => {
       carousel.next("smooth");
     });
+
+    // autoplay
+    let autoplay = null;
+
+    const startAutoplay = () => {
+      if (autoplay === null) {
+        autoplay = setInterval(() => {
+          carousel.next("smooth");
+        }, 5000);
+      }
+    };
+
+    // pause autoplay
+    const stopAutoplay = () => {
+      if (autoplay !== null) {
+        clearInterval(autoplay);
+        autoplay = null;
+      }
+    };
+
+    // init autoplay
+    startAutoplay();
+
+    // Pausar e retomar conforme interação
+    carousel.addEventListener("mouseenter", stopAutoplay);
+    carousel.addEventListener("mouseleave", startAutoplay);
+    carousel.addEventListener("focusin", stopAutoplay);
+    carousel.addEventListener("focusout", startAutoplay);
   }
 }
 

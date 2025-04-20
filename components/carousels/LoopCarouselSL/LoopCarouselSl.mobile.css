@@ -24,6 +24,12 @@
     margin-bottom: 16px;
   }
 
+  /* ------ arrows ------ */
+  .left-arrow,
+  .right-arrow {
+    display: none;
+  }
+
   /* ------------------ card ------ */
 
   .card {

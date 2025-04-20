@@ -13,8 +13,8 @@ class Home extends HTMLElement {
       fetch(new URL("../../../../../shadow-base.css", import.meta.url)).then(
         (res) => res.text()
       ),
-      fetch(new URL("./HomeCategory.desktop.css", import.meta.url)).then(
-        (res) => res.text()
+      fetch(new URL("../default.css", import.meta.url)).then((res) =>
+        res.text()
       )
     ]);
 
