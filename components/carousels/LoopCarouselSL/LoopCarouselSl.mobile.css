@@ -1,1 +1,64 @@
- 
+@media (max-width: 767px) {
+  .content {
+    width: 370px;
+  }
+
+  /* --- header --- */
+  .carousel-header h1 {
+    font-size: 16px;
+  }
+
+  .carousel-header p {
+    text-decoration: underline;
+  }
+
+  /* --- sl-carousel --- */
+
+  .container sl-carousel {
+    margin-top: 16px;
+    height: 375px;
+  }
+
+  .container sl-carousel-item {
+    gap: 9px;
+    margin-bottom: 16px;
+  }
+
+  /* ------------------ card ------ */
+
+  .card {
+    width: 174px;
+  }
+
+  .card figure {
+    display: flex;
+    height: 158px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* ------------------ price ------ */
+
+  .price {
+    display: flex;
+    align-items: start;
+    gap: 14px;
+
+    margin-top: 12px;
+  }
+
+  .percentage {
+    display: flex;
+  }
+
+  /* ------------- button ------------ */
+
+  .buy-button {
+    width: 158px;
+    height: 40px;
+
+    border-radius: 8px;
+
+    margin-top: 16px;
+  }
+}

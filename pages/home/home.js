@@ -7,6 +7,7 @@ import "../../components/banners/TextBanner/TextBanner.js";
 import "../../components/forms/NewsletterSign/NewsletterSign.js";
 import "../../components/Footer/Footer.js";
 import "../../components/carousels/LoopCarouselSL/LoopCarouselSl.js";
+import "../../components/carousels/LoopCarouselSL/LoopCarouselSl.mobile.js";
 
 class Home extends HTMLElement {
   constructor() {
@@ -35,6 +36,10 @@ class Home extends HTMLElement {
 
       <section class="carousel-first">
         <loop-carousel-sl ></loop-carousel-sl>
+      </section>
+  
+      <section class="carousel-mobile">
+        <loop-carousel-sl-mobile ></loop-carousel-sl-mobile>
       </section>
 
       <section class="cup-banner-first" >

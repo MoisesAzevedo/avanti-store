@@ -37,8 +37,11 @@ p {
   font-weight: 700;
   position: absolute;
   right: 0;
+  cursor: pointer;
 }
-
+.carousel-header p:hover {
+  color: var(--primary);
+}
 /* --- sl-carousel --- */
 
 .container sl-carousel {
@@ -150,6 +153,27 @@ sl-carousel::part(base) {
   display: flex;
   flex-direction: column;
   padding: 8px;
+
+  position: relative;
+}
+
+.new-tag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 41px;
+  height: 22px;
+
+  border-radius: 4px;
+
+  font-size: 10px;
+  color: white;
+  background-color: rgba(0, 38, 78, 1);
 }
 
 .card figure {

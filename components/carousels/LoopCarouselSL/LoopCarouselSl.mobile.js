@@ -2,7 +2,7 @@ import { clothes_service } from "../../../services/clothes.js";
 import { chevron_arrow_svg } from "../../../img/icons/chevron-arrow.js";
 import "../../buttons/DefaultButton/DefaultButton.js";
 
-class LoopCarouselSl extends HTMLElement {
+class LoopCarouselSlMobile extends HTMLElement {
   constructor() {
     super();
   }
@@ -20,17 +20,16 @@ class LoopCarouselSl extends HTMLElement {
       )
     ]);
 
-    const clothes_slice1 = clothes_service.slice(0, 5);
-    const clothes_slice2 = clothes_service.slice(5, 10);
-    const clothes_slice3 = clothes_service.slice(10, 15);
+    const clothes_slice1 = clothes_service.slice(0, 2);
+    const clothes_slice2 = clothes_service.slice(2, 4);
+    const clothes_slice3 = clothes_service.slice(4, 6);
 
     this.innerHTML = `
       <style>
         ${baseStyles}
         ${desktopStyle}
         ${mobileStyle}
-        
-     
+
       </style>
 
       <section class="container">
@@ -42,12 +41,7 @@ class LoopCarouselSl extends HTMLElement {
           </header>
 
           <sl-carousel class="my-carousel" loop pagination>
-          <div class="left-arrow">
-              <button id="prev-btn">${chevron_arrow_svg}</button>            
-          </div>
-          <div class="right-arrow">
-              <button id="next-btn">${chevron_arrow_svg}</button>            
-          </div>
+ 
 
             <sl-carousel-item>
               ${clothes_slice1
@@ -141,7 +135,8 @@ class LoopCarouselSl extends HTMLElement {
                 <div class="card">
                   <div class="new-tag">
                     Novo
-                  </div>                
+                  </div>
+                                  
                   <figure> 
                     <img src="${clothes.image}" />
                   </figure>
@@ -181,19 +176,7 @@ class LoopCarouselSl extends HTMLElement {
         </div>
       </section>
     `;
-
-    const carousel = this.querySelector(".my-carousel");
-
-    await customElements.whenDefined("sl-carousel");
-
-    this.querySelector("#prev-btn").addEventListener("click", () => {
-      carousel.previous("smooth");
-    });
-
-    this.querySelector("#next-btn").addEventListener("click", () => {
-      carousel.next("smooth");
-    });
   }
 }
 
-customElements.define("loop-carousel-sl", LoopCarouselSl);
+customElements.define("loop-carousel-sl-mobile", LoopCarouselSlMobile);
