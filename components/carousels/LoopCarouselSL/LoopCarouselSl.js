@@ -1,5 +1,7 @@
 import { clothes_service } from "../../../services/clothes.js";
 import { chevron_arrow_svg } from "../../../img/icons/chevron-arrow.js";
+import { carouselNavigation } from "./scripts/carouselNavigation.js";
+import { addCart } from "./scripts/addCart.js";
 import "../../buttons/DefaultButton/DefaultButton.js";
 
 class LoopCarouselSl extends HTMLElement {
@@ -93,8 +95,11 @@ class LoopCarouselSl extends HTMLElement {
                     </p>
                   </div>
 
-                  <div class="buy-button">
-                    <default-button value="Comprar"></default-button>
+                  <div class="buy-button"
+                      data-image="${clothes.image}"
+                      data-title="${clothes.title}"
+                      data-current-value="${clothes.current_value}">
+                    <default-button></default-button>
                   </div>
 
                 </div>
@@ -136,7 +141,10 @@ class LoopCarouselSl extends HTMLElement {
                     S</p>
                   </div>
 
-                  <div class="buy-button">
+                  <div class="buy-button"
+                      data-image="${clothes.image}"
+                      data-title="${clothes.title}"
+                      data-current-value="${clothes.current_value}">
                     <default-button></default-button>
                   </div>
 
@@ -177,7 +185,10 @@ class LoopCarouselSl extends HTMLElement {
                     S</p>
                   </div>
 
-                  <div class="buy-button">
+                  <div class="buy-button"
+                      data-image="${clothes.image}"
+                      data-title="${clothes.title}"
+                      data-current-value="${clothes.current_value}">
                     <default-button></default-button>
                   </div>
 
@@ -194,45 +205,14 @@ class LoopCarouselSl extends HTMLElement {
     `;
 
     const carousel = this.querySelector(".my-carousel");
-    const container = this.querySelector(".container");
+    const prevBtn = this.querySelector("#prev-btn");
+    const nextBtn = this.querySelector("#next-btn");
+    const buyButtons = this.querySelectorAll(".buy-button");
 
     await customElements.whenDefined("sl-carousel");
 
-    this.querySelector("#prev-btn").addEventListener("click", () => {
-      carousel.previous("smooth");
-    });
-
-    this.querySelector("#next-btn").addEventListener("click", () => {
-      carousel.next("smooth");
-    });
-
-    // autoplay
-    let autoplay = null;
-
-    const startAutoplay = () => {
-      if (autoplay === null) {
-        autoplay = setInterval(() => {
-          carousel.next("smooth");
-        }, 5000);
-      }
-    };
-
-    // pause autoplay
-    const stopAutoplay = () => {
-      if (autoplay !== null) {
-        clearInterval(autoplay);
-        autoplay = null;
-      }
-    };
-
-    // init autoplay
-    startAutoplay();
-
-    // Pausar e retomar conforme interação
-    carousel.addEventListener("mouseenter", stopAutoplay);
-    carousel.addEventListener("mouseleave", startAutoplay);
-    carousel.addEventListener("focusin", stopAutoplay);
-    carousel.addEventListener("focusout", startAutoplay);
+    carouselNavigation(carousel, prevBtn, nextBtn);
+    addCart(buyButtons);
   }
 }
 

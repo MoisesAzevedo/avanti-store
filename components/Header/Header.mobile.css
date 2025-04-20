@@ -135,6 +135,12 @@
   .button-and-lenght {
     display: flex;
     position: relative;
+    cursor: pointer;
+  }
+
+  .button-and-lenght:active .cart-button {
+    cursor: pointer;
+    color: var(--primary);
   }
 
   .cart-button {
