@@ -1,9 +1,15 @@
+/* svg */
 import { logo_svg } from "@img/logo.js";
 import { search_svg } from "@img/icons/search.js";
 import { person_svg } from "@img/icons/person.js";
 import { cart_button_svg } from "@img/icons/cart.js";
 import { burg_menu_svg } from "@img/icons/burg-menu.js";
-import "./components/HeaderNav.js";
+
+/* components */
+import "./components/HeaderNav/HeaderNav.js";
+import "./components/Cart/Cart.js";
+
+/* scripts */
 import { handleUserNameClick } from "./script/handleUserNameClick.js";
 import { handleCartToggle } from "./script/handleCartToggle.js";
 import { handleCartClose } from "./script/handleCartClose.js";
@@ -99,49 +105,8 @@ class Header extends HTMLElement {
               </div>
             </div>
           </div>
-
-          <section class="cart">
-            <header> 
-              <h1>Carrinho</h1>
-              <p class="cart-end">X</p>            
-            </header>         
-            <div class="card-container">
-            ${cart
-              .map((item, index, self) => {
-                // title quantity
-                const count = self.filter((i) => i.title === item.title).length;
-
-                //  no re-render
-                const isFirstOccurrence =
-                  self.findIndex((i) => i.title === item.title) === index;
-                if (!isFirstOccurrence) return "";
-
-                return `
-                  <div class="card">
-                    <figure> 
-                      <img src="${item.image}" />
-                    </figure>
-                    
-                    <div class="inf">
-                      <h3>${item.title}</h3>
-                      <div class="price">
-                        <div class="monetary">
-                          <p>${item.currentValue}</p>
-                        </div>
-                      </div>
-                      <div class="quant">
-                        <p>Selecionados: </p>
-                        <p>${count}</p>
-                      </div>
-                      <button class="delete-button">Excluir</button>
-                    </div>
-                  </div>
-                `;
-              })
-              .join("")}
-                  
-            </div>
-          </section>
+          
+          <cart-app></cart-app>
         </header>
       `;
 

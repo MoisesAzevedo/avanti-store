@@ -28,7 +28,7 @@ export const clothes_service = [
   },
   {
     image: "img/images/clothes/dress-shirt.png",
-    title: "Camisa social branca",
+    title: "Camisa social feminina",
     old_value: "R$ 109,90",
     current_value: "R$79,90",
     discount_percent: "27%",

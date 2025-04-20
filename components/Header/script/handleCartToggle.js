@@ -3,16 +3,16 @@ export function handleCartToggle(shadowRoot, cartAndUserElements) {
 
   cartAndUserElements.forEach((cartAndUser) => {
     cartAndUser.addEventListener("click", () => {
-      const cartSection = shadowRoot.querySelector(".cart");
+      const cartComponent = shadowRoot.querySelector("cart-app");
+      if (!cartComponent) return;
 
+      const cartSection = cartComponent.shadowRoot.querySelector(".cart");
       if (!cartSection) return;
 
-      const isOpen =
-        cartSection.style.display === "flex" &&
-        cartSection.style.width === "380px";
+      const isOpen = cartSection.style.right === "0px";
 
       if (isOpen) {
-        cartSection.style.width = "0px";
+        cartSection.style.right = "-380px";
 
         cartSection.addEventListener(
           "transitionend",
@@ -23,10 +23,10 @@ export function handleCartToggle(shadowRoot, cartAndUserElements) {
         );
       } else {
         cartSection.style.display = "flex";
-        cartSection.style.overflow = "scroll";
 
+        // Defer to next frame to allow display change to apply before animating
         requestAnimationFrame(() => {
-          cartSection.style.width = "380px";
+          cartSection.style.right = "0px";
         });
       }
     });

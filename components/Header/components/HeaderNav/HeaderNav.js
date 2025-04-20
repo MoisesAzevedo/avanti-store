@@ -1,6 +1,6 @@
 import { burg_menu_svg } from "@img/icons/burg-menu.js";
-import { categories } from "./categories/categories.js";
-import { all_categories } from "./categories/AllCategories/all-categories-import.js";
+import { categories } from "../categories/categories.js";
+import { all_categories } from "../categories/AllCategories/all-categories-import.js";
 
 class NavMenu extends HTMLElement {
   constructor() {

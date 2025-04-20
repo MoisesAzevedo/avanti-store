@@ -7,20 +7,10 @@ export function handleCartClose(shadowRoot, cartEndElements) {
 
       if (!cartSection) return;
 
-      const isOpen =
-        cartSection.style.display === "flex" &&
-        cartSection.style.width === "380px";
+      const isOpen = cartSection.style.right === "0px";
 
       if (isOpen) {
-        cartSection.style.width = "0px";
-
-        cartSection.addEventListener(
-          "transitionend",
-          () => {
-            cartSection.style.display = "none";
-          },
-          { once: true }
-        );
+        cartSection.style.right = "-380px";
       }
     });
   });
