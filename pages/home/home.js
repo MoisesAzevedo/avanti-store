@@ -6,6 +6,7 @@ import "../../components/banners/MapBanner/MapBanner.js";
 import "../../components/banners/TextBanner/TextBanner.js";
 import "../../components/forms/NewsletterSign/NewsletterSign.js";
 import "../../components/Footer/Footer.js";
+import "../../components/carousels/LoopCarouselSL/LoopCarouselSl.js";
 
 class Home extends HTMLElement {
   constructor() {
@@ -20,14 +21,51 @@ class Home extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
       <style>${css}</style>
-      <promotion-app class="promotion"></promotion-app>
-      <header-app></header-app>
-      <banner-component></banner-component>
-      <cup-banner></cup-banner>
-      <map-banner></map-banner>
-      <text-banner></text-banner>
-      <newsletter-sign></newsletter-sign>
-      <footer-app></footer-app>
+      <section class="promotion">
+        <promotion-app ></promotion-app>
+      </section>
+
+      <section class="header" >
+        <header-app ></header-app>
+      </section>
+
+      <section class="banner">
+        <banner-component ></banner-component>
+      </section>
+
+      <section class="carousel-first">
+        <loop-carousel-sl ></loop-carousel-sl>
+      </section>
+
+      <section class="cup-banner-first" >
+        <cup-banner></cup-banner>
+      </section>
+
+      <section class="map-banner">
+        <map-banner></map-banner>
+      </section>
+
+      <section class="cup-banner-second">
+        <cup-banner></cup-banner>
+      </section>
+
+      <section class="carousel-second">
+        <loop-carousel-sl></loop-carousel-sl>      
+      </section>
+
+      <section class="text-banner">
+        <text-banner></text-banner>
+      </section>
+
+      <section class="newsletter-sign">
+        <newsletter-sign></newsletter-sign>
+      </section>
+
+      <section class="footer">
+        <footer-app></footer-app>
+      </section>
+      
+   
     `;
   }
 }

@@ -35,3 +35,44 @@ body {
   --desktop-min: 768px;
   --mobile-max: 767px;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* -- text -- */
+p {
+  margin: 0;
+  margin-left: 0.3rem;
+  padding: 0;
+  line-height: 1.5;
+  font-size: var(--default-font-size);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  white-space: pre;
+  margin: 0;
+}
+
+a,
+button,
+div {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* -- containers -- */
+
+figure {
+  margin: 0;
+}

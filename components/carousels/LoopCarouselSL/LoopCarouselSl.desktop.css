@@ -1,0 +1,256 @@
+p {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 1260px;
+}
+
+/* --- header --- */
+.carousel-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  height: 27px;
+  width: 100%;
+}
+
+.carousel-header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+}
+
+.carousel-header p {
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  right: 0;
+}
+
+/* --- sl-carousel --- */
+
+.container sl-carousel {
+  width: 100%;
+  height: 430px;
+  margin-top: 20px;
+}
+
+.my-carousel {
+  position: relative;
+}
+
+.container sl-carousel-item {
+  display: flex;
+  align-items: start;
+  gap: 16px;
+  flex-direction: row;
+
+  height: max-content;
+}
+
+/* ------ arrows ------ */
+
+sl-carousel::part(previous-button),
+sl-carousel::part(next-button) {
+  display: none;
+}
+
+/* slides gap */
+sl-carousel::part(base) {
+  gap: 0;
+}
+
+.left-arrow,
+.right-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  transform: translateY(-50%);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.left-arrow {
+  position: absolute;
+  left: -15px;
+}
+
+.right-arrow {
+  position: absolute;
+  right: -15px;
+}
+
+.left-arrow button,
+.right-arrow button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+
+  transition: var(--hover-transition);
+  cursor: pointer;
+
+  color: var(--primary);
+}
+
+.left-arrow button:hover,
+.right-arrow button:hover {
+  background-color: var(--primary);
+  transition: var(--hover-transition);
+
+  color: white;
+  border: 2px solid white;
+}
+
+.left-arrow button:active,
+.right-arrow button:active {
+  background-color: var(--secondary);
+  transition: var(--hover-transition);
+
+  color: rgb(194, 194, 194);
+  border: 2px solid rgb(194, 194, 194);
+}
+
+#prev-btn svg {
+  transform: rotate(180deg);
+}
+
+/* ------------------ card ------ */
+
+.card {
+  width: 220px;
+  border: 1px solid var(--light-gray);
+  border-radius: 10px;
+  border-width: 1px;
+
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.card figure {
+  display: flex;
+  height: 222px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+}
+
+.card h3 {
+  font-weight: 400;
+  font-size: 14px;
+
+  color: var(--font-color-secondary);
+
+  margin-top: 16px;
+}
+/* ------------------ price ------ */
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: 100%;
+  color: var(--font-color-secondary);
+
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.monetary p:first-of-type {
+  font-weight: 400;
+  font-size: 12px;
+
+  text-decoration: line-through;
+}
+
+.monetary p {
+  font-weight: 700;
+  font-size: 16px;
+
+  color: black;
+}
+
+.percentage {
+  display: flex;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(94, 192, 190, 1);
+  width: 64px;
+  height: 20px;
+  border-radius: 4px;
+  gap: 10px;
+}
+
+.tag p {
+  font-size: 11px;
+  font-weight: 700;
+
+  color: white;
+  text-decoration: underline;
+}
+
+/* ------------------ installments ------ */
+
+.installments {
+  display: flex;
+}
+.installments p:first-of-type {
+  white-space: pre;
+  font-weight: 400;
+}
+
+.installments p {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--font-color-secondary);
+}
+
+/* ------------- button ------------ */
+
+.buy-button {
+  width: 222px;
+  height: 40px;
+
+  border-radius: 8px;
+
+  margin-top: 16px;
+}

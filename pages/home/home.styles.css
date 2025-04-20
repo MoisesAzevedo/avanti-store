@@ -3,3 +3,24 @@
     display: flex;
   }
 }
+
+.banner,
+.carousel-first {
+  margin-bottom: 96px;
+}
+
+.cup-banner-first {
+  margin-bottom: 55px;
+}
+.map-banner {
+  margin-bottom: 46px;
+}
+.cup-banner-second,
+.carousel-second,
+.text-banner {
+  margin-bottom: 64px;
+}
+
+.newsletter-sign {
+  margin-bottom: 40px;
+}
