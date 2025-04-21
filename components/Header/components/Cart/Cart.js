@@ -12,7 +12,7 @@ class Cart extends HTMLElement {
       fetch(new URL("../../../../shadow-base.css", import.meta.url)).then(
         (res) => res.text()
       ),
-      fetch(new URL("./cart.css", import.meta.url)).then((res) => res.text())
+      fetch(new URL("./Cart.css", import.meta.url)).then((res) => res.text())
     ]);
 
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
