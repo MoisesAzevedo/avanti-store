@@ -8,6 +8,9 @@ import "../../components/forms/NewsletterSign/NewsletterSign.js";
 import "../../components/Footer/Footer.js";
 import "../../components/carousels/LoopCarouselSL/LoopCarouselSl.js";
 
+/* observes */
+import { observeElementVisibility } from "./observers/intersectionObserver.js";
+
 class Home extends HTMLElement {
   constructor() {
     super();
@@ -15,12 +18,25 @@ class Home extends HTMLElement {
   }
 
   async connectedCallback() {
-    const css = await fetch(new URL("./home.styles.css", import.meta.url)).then(
-      (res) => res.text()
-    );
+    const [globalStyles, defaultStyles, observerAnimation] = await Promise.all([
+      fetch(new URL("../../shadow-base.css", import.meta.url)).then((res) =>
+        res.text()
+      ),
+      fetch(new URL("./home.styles.css", import.meta.url)).then((res) =>
+        res.text()
+      ),
+      fetch(new URL("./observer.css", import.meta.url)).then((res) =>
+        res.text()
+      )
+    ]);
 
     this.shadowRoot.innerHTML = `
-      <style>${css}</style>
+      <style>
+          ${globalStyles}
+          ${defaultStyles}
+          ${observerAnimation}
+        
+        </style>
       <section class="promotion">
         <promotion-app ></promotion-app>
       </section>
@@ -64,9 +80,51 @@ class Home extends HTMLElement {
       <section class="footer">
         <footer-app></footer-app>
       </section>
-      
-   
     `;
+
+    setTimeout(() => {
+      const banner = this.shadowRoot.querySelector(".banner");
+      const carouselFirst = this.shadowRoot.querySelector(".carousel-first");
+      const cupBannerFirst = this.shadowRoot.querySelector(".cup-banner-first");
+      const mapBanner = this.shadowRoot.querySelector(".map-banner");
+      const cupBannerSecond =
+        this.shadowRoot.querySelector(".cup-banner-second");
+      const carouselSecond = this.shadowRoot.querySelector(".carousel-second");
+      const textBanner = this.shadowRoot.querySelector(".text-banner");
+      const newsletterSign = this.shadowRoot.querySelector(".newsletter-sign");
+
+      observeElementVisibility(carouselFirst, (el) => {
+        el.classList.add("animate-in");
+      });
+
+      observeElementVisibility(banner, (el) => {
+        el.classList.add("animate-in");
+      });
+
+      observeElementVisibility(cupBannerFirst, (el) => {
+        el.classList.add("animate-in");
+      });
+
+      observeElementVisibility(mapBanner, (el) => {
+        el.classList.add("animate-in");
+      });
+
+      observeElementVisibility(cupBannerSecond, (el) => {
+        el.classList.add("animate-in");
+      });
+
+      observeElementVisibility(carouselSecond, (el) => {
+        el.classList.add("animate-in");
+      });
+
+      observeElementVisibility(textBanner, (el) => {
+        el.classList.add("animate-in");
+      });
+
+      observeElementVisibility(newsletterSign, (el) => {
+        el.classList.add("animate-in");
+      });
+    }, 1000);
   }
 }
 

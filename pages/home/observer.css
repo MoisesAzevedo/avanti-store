@@ -1,0 +1,99 @@
+.banner {
+  opacity: 0;
+  transform: translatey(60px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.banner.animate-in {
+  opacity: 1;
+  transform: translatey(0);
+}
+
+/* -------- carousel first */
+
+.carousel-first {
+  opacity: 0;
+  transform: translatey(-30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.carousel-first.animate-in {
+  opacity: 1;
+  transform: translatey(0);
+}
+
+/* -------- .cup-banner-first */
+
+.cup-banner-first {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 3s ease, transform 2s ease;
+}
+
+.cup-banner-first.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* -------- map-banner */
+
+.map-banner {
+  opacity: 0;
+
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.map-banner.animate-in {
+  opacity: 1;
+}
+
+/* -------- .cup-banner-second*/
+
+.cup-banner-second {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.cup-banner-second.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* -------- .carousel-second*/
+
+.carousel-second {
+  opacity: 0;
+  transform: translatey(100px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.carousel-second.animate-in {
+  opacity: 1;
+  transform: translatey(0);
+}
+
+/* -------- .text-banner*/
+
+.text-banner {
+  opacity: 0;
+
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.text-banner.animate-in {
+  opacity: 1;
+}
+
+/* -------- .newsletterSign*/
+
+.newsletter-sign {
+  opacity: 0;
+  transform: translatex(-100px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.newsletter-sign.animate-in {
+  opacity: 1;
+  transform: translatex(0);
+}
