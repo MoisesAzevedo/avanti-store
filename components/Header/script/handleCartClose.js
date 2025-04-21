@@ -11,6 +11,13 @@ export function handleCartClose(shadowRoot, cartEndElements) {
 
       if (isOpen) {
         cartSection.style.right = "-380px";
+        cartSection.addEventListener(
+          "transitionend",
+          () => {
+            cartSection.style.display = "none";
+          },
+          { once: true }
+        );
       }
     });
   });
