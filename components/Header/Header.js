@@ -35,7 +35,7 @@ class Header extends HTMLElement {
     ]);
 
     const userNameStorage =
-      JSON.parse(localStorage.getItem("username")) || "Qual o seu nome?";
+      localStorage.getItem("username") || "Qual o seu nome?";
     const user_name = userNameStorage;
     const input_default_value = "Digite aqui o que você procura";
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -130,6 +130,15 @@ class Header extends HTMLElement {
     handleDeleteItemCart(this.shadowRoot, deleteButtons, cart, () =>
       this.connectedCallback()
     );
+
+    //listen the event to updated cart length (mobile and desktop)
+    document.addEventListener("cart-updated", (event) => {
+      const cartLengthElements =
+        this.shadowRoot.querySelectorAll(".cart-length");
+      cartLengthElements.forEach((el) => {
+        el.textContent = event.detail.length;
+      });
+    });
   }
 }
 

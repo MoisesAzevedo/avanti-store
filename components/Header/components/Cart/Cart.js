@@ -1,5 +1,7 @@
 import { handleCartClose } from "../../script/handleCartClose.js";
 import { handleDeleteItemCart } from "../../script/handleDeleteItemCart.js";
+/* svg */
+import { x_svg } from "../../../../img/icons/x.js";
 
 class Cart extends HTMLElement {
   constructor() {
@@ -25,7 +27,7 @@ class Cart extends HTMLElement {
       <section class="cart">
         <header> 
           <h1>Carrinho</h1>
-          <p class="cart-end">X</p>            
+          <p class="cart-end">${x_svg}</p>            
         </header>         
         <div class="card-container">
           ${cart
@@ -67,9 +69,54 @@ class Cart extends HTMLElement {
 
     handleCartClose(this.shadowRoot, cartEnd);
 
-    handleDeleteItemCart(this.shadowRoot, deleteButtons, cart, () =>
-      this.connectedCallback()
-    );
+    handleDeleteItemCart(this.shadowRoot, deleteButtons, cart);
+
+    //listen the event to re-render cart-container
+    document.addEventListener("render-card", (event) => {
+      const cardContainer = this.shadowRoot.querySelector(".card-container");
+      if (cardContainer) {
+        const content = event.detail.data;
+
+        cardContainer.innerHTML = `
+        ${content
+          .map((item, index, self) => {
+            const count = self.filter((i) => i.title === item.title).length;
+            const isFirstOccurrence =
+              self.findIndex((i) => i.title === item.title) === index;
+            if (!isFirstOccurrence) return "";
+
+            return `
+              <div class="card">
+                <figure> 
+                  <img src="${item.image}" />
+                </figure>
+                
+                <div class="inf">
+                  <h3>${item.title}</h3>
+                  <div class="price">
+                    <div class="monetary">
+                      <p>${item.currentValue}</p>
+                    </div>
+                  </div>
+                  <div class="quant">
+                    <p>Selecionados: </p>
+                    <p>${count}</p>
+                  </div>
+                  <button class="delete-button">Excluir</button>
+                </div>
+              </div>
+            `;
+          })
+          .join("")}
+      `;
+      }
+
+      // listenner to button
+      const newDeleteButtons =
+        this.shadowRoot.querySelectorAll(".delete-button");
+      const updatedCart = event.detail.data;
+      handleDeleteItemCart(this.shadowRoot, newDeleteButtons, updatedCart);
+    });
   }
 }
 

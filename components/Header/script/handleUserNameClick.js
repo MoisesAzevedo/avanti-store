@@ -6,7 +6,7 @@ export function handleUserNameClick(shadowRoot, svgName) {
     const username = window.prompt("Como você se chama?", currentName || "");
 
     if (username !== null && username.trim() !== "") {
-      localStorage.setItem("username", JSON.stringify(username));
+      localStorage.setItem("username", username);
       const helloUser = shadowRoot.querySelector(".hello-user p:nth-child(2)");
       if (helloUser) helloUser.textContent = username;
     }
