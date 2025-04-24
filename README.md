@@ -28,7 +28,7 @@ OU se preferir, clonar o repositório:
 Clone este repositório para o seu computador local:
 
 ```bash
-git clone https://github.com/<seu-usuario>/avanti-store.git
+git clone https://github.com/MoisesAzevedo/avanti-store.git
 ```
 
 ### 2. Navegar Até a Pasta
